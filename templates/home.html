@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<body>
+    <div class="container" style="text-align: center">
+            {% include 'navbar.html' %}
+            <h1>This ia our offical website</h1>
+
+        <form action="/home/" method="POST">
+            {% csrf_token %}
+            <input type="text" name="check">
+            <button>send</button>
+        <style>
+        h1{
+            color:tomato;
+        }
+        p{
+            color:red;
+        }
+        </style>
+        </form>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, aliquam? Incidunt unde ducimus pariatur. Reiciendis autem provident voluptatem possimus culpa nisi quae, cum magni molestiae blanditiis, quod sunt itaque rerum mollitia ratione unde excepturi placeat facere earum repellat consequatur similique? Velit, quidem. Aliquid culpa, explicabo saepe quae enim, earum ipsum expedita tempora, et minima temporibus dolores dicta nulla mollitia! Iusto ad praesentium quidem consequuntur quam facilis necessitatibus vero illum nam assumenda veritatis cum, iure fuga, accusantium culpa totam doloremque eveniet quas tempore distinctio voluptates, deserunt reprehenderit. Ducimus maiores ipsam aspernatur. Quas esse officiis labore sed corrupti aspernatur placeat amet magni, voluptatum repellat sint dolores error! Dolorem magnam omnis excepturi dolorum, libero provident ratione illum necessitatibus quas laborum explicabo sapiente praesentium non facere vel atque hic aperiam id officia facilis. Nihil voluptas voluptates eum, tempore dolorem dignissimos, omnis esse enim quos perferendis aliquam atque, ipsum laudantium! Quas voluptatum distinctio iure, quo delectus sit aliquam quibusdam totam provident voluptas ipsam ut incidunt aut illum accusantium explicabo hic cumque minima libero dignissimos doloremque odit unde velit similique! Ipsa quibusdam nam quod, hic magni asperiores vel tenetur sint atque amet nobis, optio at laudantium. Ullam sint quasi placeat aut cupiditate autem quas optio nemo?</p>
+            <button>Contact Us</button>
+
+
+            <!-- accessing dynamic value -->
+        {% if isActive %}
+
+        <div>
+            <h1> todays date is {{date}} </h1>
+            <h1>name is {{name}} </h1>
+            <hr>
+            <h1<student data</h1>
+            <h2>student name : {{student_data.student_name}}</h2>
+            <h2>student college : {{student_data.student_college}}</h2>
+            <h2>student city : {{student_data.student_city}}</h2>
+            <hr>
+            <h1>favorite programe</h1>
+            {% for p in list_of_programs %}
+
+            <h3>{{p}}</h3>
+
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
